@@ -1,0 +1,60 @@
+@import "@litres-libs/global-styles/src/base";
+
+.newLoyaltyProgramModal {
+  background: #F4F4FC;
+
+  &_mobile {
+    padding: 24px;
+  }
+
+  &__header {
+    background-color: revert !important;
+
+    div[role="button"] {
+      color: $pallets-gray-130;
+    }
+  }
+
+  &__content {
+    &__info {
+      @include BodyL;
+      margin-top: 24px;
+    }
+
+    &__image {
+      width: 560px;
+      margin: -33px -24px 24px;
+
+      &_mobile {
+        width: 100vw;
+        margin: -52px -31px 24px;
+        object-fit: cover;
+      }
+    }
+
+    &__button {
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+
+    &__oferta {
+      @include Caption;
+      margin-top: 16px;
+
+      color: $content-light-secondary;
+      font-weight: 400;
+    }
+
+    &__bottomImage {
+      display: block;
+      width: 382px;
+      margin-top: 16px;
+      margin-right: auto;
+      margin-left: auto;
+
+      &_mobile {
+        width: calc(100vw - 64px) !important;
+      }
+    }
+  }
+}

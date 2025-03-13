@@ -1,0 +1,100 @@
+@import "@litres-libs/global-styles/src/base";
+$mint-cream: #E9FAF1;
+$green: $service-light-success-content;
+
+.benefitsWidget {
+  @include BodyM;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+
+  color: $pallets-gray-130;
+
+  text-align: left;
+
+  background-color: $pallets-blue-5;
+  &_green {
+    background: $mint-cream;
+  }
+  &__winkIcon {
+    img {
+      width: 60px;
+      height: 16px;
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    text-align: left;
+  }
+  &__listItem {
+    position: relative;
+
+    padding-left: 20px;
+    &::before {
+      position: absolute;
+      top: 9px;
+      left: 9px;
+
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+
+      background-color: $pallets-gray-130;
+
+      content: '';
+    }
+  }
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &__text {
+      margin-right: 3px;
+    }
+  }
+  &__moreDetailedButton {
+    padding: 0;
+  }
+  &__buttonWink {
+    width: 100%;
+  }
+
+  &__successBlock {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    svg {
+      position: relative;
+      top: -1px;
+
+      color: $green;
+    }
+  }
+  &__price {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+.textGreen {
+  @include Caption700;
+  color: $green;
+}
+
+
+

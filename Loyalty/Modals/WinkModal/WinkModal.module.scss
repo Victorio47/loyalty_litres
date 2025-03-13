@@ -1,0 +1,20 @@
+@import "../../../../../node_modules/@litres-libs/global-styles/src/base/index";
+
+.winkModal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  &__error {
+    @include Caption;
+    color: $service-light-error-content;
+  }
+  &__terms {
+    @include Caption;
+  }
+  @include min-screen-700 {
+    max-width: 460px;
+  }
+}

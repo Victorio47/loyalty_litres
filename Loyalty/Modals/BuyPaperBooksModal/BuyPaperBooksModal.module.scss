@@ -1,0 +1,26 @@
+@import "../../../../../node_modules/@litres-libs/global-styles/src/base/index";
+
+.conditionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 20px;
+
+  list-style: decimal;
+
+  @include BodyL;
+}
+
+.partnerLink {
+  padding: 0;
+}
+
+.profitDescription {
+
+  /* Если поставить точку в тексте - она будет располагаться одна на новой строке. Даже новая css-фича, еще не особо поддерживаемая во браузерах - "text-wrap: balance", не помогает - весь текст смещается влево. Поэтому, рисуем точку в псевдоэлементе. */
+  &::after {
+    position: absolute;
+
+    content: '.';
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../../../node_modules/@litres-libs/global-styles/src/base/index";
+
+.tooltip {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 367px !important;
+  padding: 16px;
+  border-radius: 12px;
+
+  background: $pallets-gray-90 !important;
+  @include min-screen-414 {
+    max-width: 367px !important;
+    max-height: max-content;
+  }
+  &__text {
+    padding: 10px;
+    border-radius: 5px;
+
+    color: $white;
+    text-align: start;
+  }
+  &__content {
+    cursor: pointer;
+  }
+}

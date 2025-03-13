@@ -1,0 +1,62 @@
+@import "../../../../../node_modules/@litres-libs/global-styles/src/base/index";
+
+.bonusDeductToggle {
+  display: flex;
+
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 12px 12px 16px;
+  border-radius: 16px;
+
+  background: $pallets-blue-5;
+  @include min-screen-700 {
+    max-width: 320px;
+  }
+
+  &__leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__text {
+    @include Label;
+    margin-left: 4px;
+
+    line-height: 22px;
+    &_withoutMargin {
+      margin: 0;
+    }
+  }
+  &__bottomText {
+    display: flex;
+    flex-direction: column;
+
+    color: $pallets-gray-70;
+    line-height: 18px;
+    @include BodyM;
+    @include min-screen-700 {
+      display: block;
+      flex-direction: row;
+    }
+  }
+  &__isDisabledView {
+    min-height: 44px;
+  }
+  &__buttonRepeatAgain {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    color: #3D3DC7;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 18px;
+
+    background: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+}

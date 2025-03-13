@@ -1,0 +1,96 @@
+@import "../../../../../../node_modules/@litres-libs/global-styles/src/base/index";
+.winkScreen {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+
+  text-align: center;
+  @include min-screen-700 {
+    max-width: 460px;
+  }
+  &__title {
+    @include Headline3;
+    position: relative;
+
+    color: $content-light-primary;
+  }
+  &__subtitle {
+    @include BodyM;
+    color: $content-light-primary;
+    font-weight: 700;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    text-align: left;
+  }
+  &__listItem {
+    position: relative;
+
+    padding-left: 20px;
+    &::before {
+      position: absolute;
+      top: 9px;
+      left: 9px;
+
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+
+      background-color: $pallets-gray-130;
+
+      content: '';
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+
+    text-align: left;
+  }
+  &__logoWink {
+    width: 162px;
+    height: 42px;
+  }
+}
+
+.winkInformation {
+  &__price {
+    &__crossOut {
+      @include Caption700;
+
+      position: relative;
+
+      color: $content-light-grey-3;
+      font-weight: 700;
+      &::before {
+        position: absolute;
+        top: 5px;
+        left: -2px;
+
+        width: 35px;
+        height: 2px;
+
+        background: $accent-light-orange-content;
+
+        transform: rotate(-7deg);
+
+        content: "";
+      }
+    }
+
+    &__highlight {
+      @include Caption700;
+
+      color: $accent-light-orange-content;
+      font-weight: 700;
+    }
+  }
+}

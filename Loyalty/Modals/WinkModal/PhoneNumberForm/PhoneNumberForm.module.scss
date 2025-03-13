@@ -1,0 +1,26 @@
+@import "../../../../../../node_modules/@litres-libs/global-styles/src/base/index";
+
+.phoneNumberForm {
+  [class^="AuthContent_wrapper"] {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    box-shadow: none;
+  }
+  [class^="AuthContent_closeIcon"] {
+    display: none;
+  }
+  [class^="AuthContent_backLink"] {
+    display: none;
+  }
+  [class^="AuthContent_content"] {
+    padding: 0;
+  }
+}
+
+.phoneNumberFormModal {
+  [class^="AuthContent_backLink"] {
+    display: none;
+  }
+}
